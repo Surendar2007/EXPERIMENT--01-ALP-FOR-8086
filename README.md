@@ -1,7 +1,7 @@
 # EXPERIMENT--01-ALP-FOR-8086
-Name :
-Roll no 
-Date of experiment :
+Name : S.D. Surendar
+Roll no : 212224110052
+Date of experiment :29.8.2025
 
 
 
@@ -79,24 +79,215 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 ## Addition  of 8 bit ALP 
 
+MOV CL,00
 
+MOV AX,[3001H] 
+
+MOV BX,[3003H] 
+
+ADD AX,BX 
+
+JNC Loop
+
+INC CL
+
+Loop:
+
+MOV [3005H],AX 
+
+MOV [3007H],CL 
+
+HLT 
 
 ## Output  
+
+<img width="1919" height="1137" alt="addition pmc" src="https://github.com/user-attachments/assets/504a6c1e-5928-40f0-8ad6-7207d27aac2c" />
+
  
 ## Subtraction   of 8 bit numbers  ALP 
+MOV CL,00
+
+MOV AX,[3001H] 
+
+MOV BX,[3003H] 
+
+SUB AX,BX 
+
+JNC Loop 
+
+INC CL 
+
+NOT AX 
+
+INC AX 
+
+Loop:
+
+MOV [3005H],AX 
+
+MOV [3007H],CL
+
+HLT 
  
 ## Output  
+<img width="1144" height="448" alt="image" src="https://github.com/user-attachments/assets/234a85b5-4cda-4d26-abe7-c12de428b96d" />
+
 ## Multiplication alp 
+MOV CL,00 
+
+MOV AX,[3001H] 
+
+MOV BX,[3003H]
+
+MUL BX 
+
+MOV [3005H],AX
+
+MOV [3007H],DX
+
+HLT
+
  ## Output  
+<img width="1191" height="594" alt="image" src="https://github.com/user-attachments/assets/f1d29be2-d1e8-41d8-b314-7fefd79634ea" />
 
 
 ## Division alp 
+MOV CL,00 
+
+MOV AX,[3001H]
+
+MOV BX,[3003H] 
+
+DIV BX 
+
+MOV [3005H],AX
+
+MOV [3007H],DX 
+
+HLT
 
 ## Output  
+<img width="1207" height="568" alt="image" src="https://github.com/user-attachments/assets/d3d26f92-f16a-43c5-81c8-db975ff56558" />
+
+Truth table for logic gate:
+
+<img width="702" height="706" alt="logic_gates_truth_table" src="https://github.com/user-attachments/assets/ada4fc7d-c363-47f6-b737-ef16beba9539" />
+
+AND
+
+MOV AX,[3001H] 
+
+MOV BX,[3003H]
+
+AND AX,BX
+
+MOV [3005H],AX
+
+HLT
+
+OUTPUT:
+<img width="705" height="429" alt="image" src="https://github.com/user-attachments/assets/65a8f950-873a-4c56-8876-d44f44b1501f" />
+
+OR:
+
+MOV AX,[3001H]
+
+MOV BX,[3003H] 
+
+OR AX,BX 
+
+MOV [3005H],AX 
+
+HLT
+
+OUTPUT:
+
+<img width="623" height="383" alt="image" src="https://github.com/user-attachments/assets/5810564c-19dc-4ee2-887a-33d9660c1c18" />
+
+NOR:
+MOV AX,[3001H]
+
+MOV BX,[3003H]
+
+OR AX,BX 
+
+NOT AX 
+
+MOV [3005H],AX 
+
+HLT
+
+OUTPUT:
+<img width="1028" height="639" alt="image" src="https://github.com/user-attachments/assets/0e222306-7525-47ba-91fe-bc4a10fc3b1d" />
+
+NOT:
+
+MOV AX,[3001H]
+
+NOT AX 
+
+MOV [3003H],AX 
+
+HLT
+
+OUTPUT:
+<img width="1041" height="464" alt="image" src="https://github.com/user-attachments/assets/e85f74a0-a0a8-471b-a0b9-04eb5f805b0e" />
+
+XOR:
+MOV AX,[3001H]
+
+MOV BX,[3003H]
+
+XOR AX,BX
+
+MOV [3005H],AX
+
+HLT 
+
+OUTPUT:
+<img width="1026" height="638" alt="image" src="https://github.com/user-attachments/assets/c6b712d2-ef2e-4cb0-ae87-30088cbff68c" />
+
+XNOR:
+
+MOV AX,[3001H] 
+
+MOV BX,[3003H] 
+
+XOR AX,BX
+
+NOT AX
+
+MOV [3005H],AX 
+
+HLT
+
+OUTPUT:
+
+<img width="1028" height="639" alt="image" src="https://github.com/user-attachments/assets/bd89384b-d42a-4393-98ed-6c7db8596684" />
+
+NAND:
+
+MOV AX,[3001H] 
+
+MOV BX,[3003H]
+
+AND AX,BX 
+
+NOT AX
+
+MOV [3005H],AX 
+
+HLT
+
+OUTPUT:
+<img width="1022" height="598" alt="image" src="https://github.com/user-attachments/assets/9308ed5c-fa1d-4f40-9146-86b1d4c46b63" />
+
+
 
 
 ## Result :
  
+ Thus the given arithmetic and logical operations have been successfully executed.
 
 
 
